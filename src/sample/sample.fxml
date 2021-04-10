@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+
+<AnchorPane fx:id="anchor" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="680.0" prefWidth="1080.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <AnchorPane prefHeight="62.0" prefWidth="1080.0">
+            <children>
+                <MenuBar layoutY="36.0" prefHeight="25.0" prefWidth="1080.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#videoopen" text="Open" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <Button layoutX="1054.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#closeapp" styleClass="close-btn">
+                    X
+                </Button>
+                <Button layoutX="1016.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#minimize" styleClass="min-btn">
+                    -
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="1.0" layoutY="62.0" prefHeight="617.0" prefWidth="1080">
+                      <MediaView fx:id="mediaView1" fitHeight="618.0" fitWidth="1080.0" onMouseClicked="#playVideo" />
+            <AnchorPane fx:id="bottom" layoutY="534.0" prefHeight="81.0" prefWidth="1080.0">
+                <children>
+                    <Button layoutX="554.0" layoutY="41.0" mnemonicParsing="false" onAction="#play">
+                        >
+                    </Button>
+                    <Button layoutX="593.0" layoutY="41.0" mnemonicParsing="false" onAction="#pause">
+                        ||
+                    </Button>
+                    <Slider fx:id="slider" layoutY="14.0" prefHeight="14.0" prefWidth="1080.0" />
+                    <Slider fx:id="volume" layoutX="926.0" layoutY="55.0" />
+                    <Label layoutX="875.0" layoutY="54.0" text="Volume" textFill="#0886ee" />
+                    <Label fx:id="timeLabel" layoutX="950.0" layoutY="33.0" minWidth="30.0" prefWidth="130.0" textFill="WHITE" />
+                </children>
+            </AnchorPane>
+        </AnchorPane>
+
+    </children>
+</AnchorPane>
